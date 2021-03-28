@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>ru.chernakov.LayoutBoundsPlugin</id>
+    <name>LayoutBoundsPlugin</name>
+    <vendor email="41rm4kc@gmail.com" url="https://www.linkedin.com/in/41rm4kc/">Max Chernakov</vendor>
+
+    <description>
+        Plugin to enable/disable layout bounds option on connected Android devices
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+
+    <extensions defaultExtensionNs="com.intellij"/>
+
+    <actions>
+        <action
+            id="ToggleLayoutBoundsId"
+            class="ru.chernakov.layoutbounds.action.ToggleLayoutBounds"
+            text="Toggle Layout Bounds"
+            description="Show/Hide Layout bounds">
+
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt 1"/>
+        </action>
+    </actions>
+</idea-plugin>
